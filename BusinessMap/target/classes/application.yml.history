@@ -1,0 +1,49 @@
+spring:
+  data:
+    mongodb:
+      host: 8.210.11.103
+      port: 27017
+      username: capstone
+      password: capstone2020
+      database: NSWBusinessDB
+  thymeleaf:
+    prefix: classpath:/templates/
+    cache: false
+
+    #mvc:
+  #view:
+   #prefix : /WEB-INF/
+   #suffix : .html
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/dcsys_project?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: root
+#    password: Jmz5278
+
+
+
+
+server:
+  port: 8080
+  servlet:
+    jsp:
+      init-parameters:
+        development: true
+#mybatis-plus:
+ # configuration:
+  #  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+file:
+
+   uploadFolder: C:\\uploadFiles\\
+   tempFolder: C:\\tempFolder\\
+
+
+
+
+
+logging:
+   level:
+      com.troila.mapper: DEBUG
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--industry_search page-->
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jimze">
+    <title>NSW Business Map Dashboard</title>
+
+    <link rel="stylesheet" href="webjars/bootstrap/4.1.0/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="../static/css/mian.css">-->
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+
+
+</head>
+<body class="main_container">
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-color">
+        <a class="navbar-brand" href="index">NSW Business Map</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbars">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/index">Home </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="/license_dashboard">Business License</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="/article">Business Insight</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <main class="container">
+        <div class="nav-breadcrumb">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Industry</a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="industry-describe row">
+
+            <div class="describe-content">
+                <h2>
+                    NSW Industry Analysis
+                </h2>
+                <hr>
+                <p>
+                    Input your preference industry to recommend where it is better to start a new small business.<br>
+                    Led by the USYD and NSW Service, we’re a driven team of passionate individuals <br> who are dedicated to driving growth and prosperity for <b>small businesses</b>.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="industry-search row">
+            <div class="col-md-12">
+                <h2>
+                    Search
+                </h2>
+                <hr>
+
+            </div>
+
+
+            <div class="industry-search-form col-md-12">
+                <form  th:action="@{/industry_search}" th:object="${searchIndustry}" method="post">
+
+                    <div class="form-group row">
+<!--                        <label for="inputIndustry" class="sr-only">Industry</label>-->
+<!--                        <label for="inputIndustry">Industry: </label>-->
+                        <div class="col-md-1 ">
+
+                        </div>
+                        <div class="col-md-5 mb-3 ">
+                            <label for="inputIndustry">Industry: </label>
+                            <input type="search" th:field="*{name}"  class="form-control" id="inputIndustry" placeholder="Enter a Industry, E.g.Cafe" required>
+                            <div class="invalid-feedback">
+                                Industry name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <label for="inputPostCode">PostCode: </label>
+                            <input type="search" th:field="*{postCode}"  class="form-control" id="inputPostCode" placeholder="PostCode E.g.2000">
+                            <div class="invalid-feedback">
+                                Industry name is required.
+                            </div>
+                        </div>
+                        <div class="col-md-1 mb-3 mt-2">
+                            <label> </label>
+                            <button type="submit" class="offset-8 form-inline btn btn-primary">Search</button>
+                        </div>
+<!--                        <input type="search" th:field="*{postCode}"  class="form-control  offset-md-1 col-md-3" id="inputPostCide" placeholder="PostCode E.g.2000">-->
+                    </div>
+
+                </form>
+
+<!--                <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">-->
+<!--                    <p>Id: <input type="text" th:field="*{id}" /></p>-->
+
+<!--                    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>-->
+<!--                </form>-->
+
+            </div>
+
+
+            <div class="industry-popular-list text-secondary">
+                <h5>Popular Industry</h5>
+
+                    <div class="popular-list">
+                        <hr>
+                        <p>&nbsp&nbsp Click one industry</p>
+
+                        <ul class="col-6 ml-5">
+                            <li>
+                                <a href="/industry/link/restaurant" >Restaurant</a>
+                                <p>Approximately39%
+                                    of Restaurant live outside the Sydney Greater Metropolitan Region</p>
+                            </li>
+                            <li>
+                                <a href="/industry/link/cafe">Cafe</a>
+                                <p>
+                                    We’re making it easier. Your free and personal Business Concierge can assist you with everything from getting your council development application right the first time, to applying for outdoor dining, liquor licencing and more.
+                                </p>
+                            </li>
+                            <li>
+                                <a href="/industry/link/store">Store</a>
+                                <p>
+                                    The retail and wholesale trade sector covers a broad range of small and large businesses selling goods to consumers as well as other businesses and organisations.
+                                </p>
+                            </li>
+                            <li>
+                                <a href="/industry/link/gym">Gym</a>
+                                <p>
+                                    The easing of restrictions will allow small gym owners to operate with greater freedom.
+                                </p>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+
+</body>
+
+<script href="webjars/jquery/3.5.1/jquery.min.js"></script>
+<script href="webjars/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script th:src="@{js/main.js}"></script>
+
+</html>

@@ -1,0 +1,214 @@
+ body{
+     background-color:#FAFAFA;
+     color: #111000;
+}
+
+ footer{
+     max-width:960px;
+     margin:auto;
+ }
+ .bg-color{
+     background-color:rgb(21,36,126);
+ }
+.main_container{
+
+    margin:auto;
+    /*margin:5em 0em;*/
+}
+ .banner_page {
+     position:relative;
+     height:500px;
+      /*padding:5em 1em;*/
+      margin-top:4em;
+      margin-bottom:2em;
+      background-color:#e9ecef;
+      border-radius:.3rem;
+     background-image: url("../img/banner_bg.jpg");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-color: #FFFFFF;
+
+ }
+
+ .inner{
+     height: 500px;
+
+     background: rgba(0,0,0,.5);
+ }
+
+.inner >* {
+    color:#FAFAFA;
+}
+
+ .businessInfo{
+     margin:auto;
+     margin-top:5em;
+ }
+ .news-list{
+     padding:2em 1em;
+     background-color:#e9e9e9;
+     border-radius: 3px;
+ }
+
+ .other-list{
+     padding:2em 1em;
+     background-color:#e9e9e9;
+     border-radius: 3px;
+ }
+
+
+ .function{
+     margin-top:5em;
+     padding:2em 1em;
+     background-color: rgb(244,246,248);
+ }
+
+
+ .otherFunciton{
+     margin-top:5em;
+     background-color: #fff;
+     /*background-color: rgb(244,246,248);*/
+ }
+
+ .otherFunciton .explain li{
+
+     font-size:18px;
+
+ }
+
+ .explain p{
+     font-weight: 400;
+     font-size:18px;
+     letter-spacing: -.05rem;
+
+ }
+ .bottom_info{
+     margin-top:5em;
+ }
+
+
+
+ .featurette-divider {
+     margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+ }
+
+ /* Thin out the marketing headings */
+ .featurette-heading {
+     font-weight: 300;
+     line-height: 1;
+     letter-spacing: -.05rem;
+ }
+
+
+
+ @media (min-width: 40em) {
+     /* Bump up size of carousel content */
+
+     .featurette-heading {
+         font-size: 50px;
+     }
+ }
+
+ @media (min-width: 62em) {
+     .featurette-heading {
+         margin-top: 5rem;
+     }
+ }
+
+ /*
+ industry page
+ */
+
+ .nav-breadcrumb{
+     margin-top:5em;
+     /*display:inline-block;*/
+ }
+
+ .describe-h3{
+     padding:10px 5px;
+ }
+
+ .text-content{
+     font-size:24px;
+ }
+
+ .industry-describe{
+     margin-top:3em;
+     padding:2em 1em;
+     background: #FAFAFA;
+     border: 1px solid #979797;
+     box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.50);
+     border-radius: 5px;
+ }
+
+
+ .describe-content{
+     padding:2em 1em;
+     min-height:150px;
+ }
+
+ .industry-search{
+     margin-top:3em;
+     padding:2em 1em;
+     background: #FAFAFA;
+     border: 1px solid #979797;
+     box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.50);
+     border-radius: 5px;
+     min-height:350px;
+
+     margin-bottom:100px;
+ }
+
+ .industry-search-form{
+     margin-top:3em;
+ }
+
+ .industry-popular-list{
+     margin-top:5em;
+
+ }
+
+ .box-container{
+     margin-top:3em;
+     padding:2em 1em;
+     background: #FAFAFA;
+     border: 1px solid #979797;
+     box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.50);
+     border-radius: 5px;
+     min-height:350px;
+
+     margin-bottom:100px;
+ }
+
+ .footer{
+     margin-top:5em;
+ }
+
+
+ .chart{
+     padding-right:11.5em;
+ }
+
+
+ .chart p {
+
+     font-weight: 400;
+     line-height: 1.8;
+     font-size:1.25em;
+ }
+
+ .dropdownBtn:after{
+     display: inline-block;
+     float:right;
+
+     width: 0;
+     height: 0;
+     margin-right: 1em;
+     right:5em;
+     content: "";
+     border-top: 0.7em solid;
+     border-right: .45em solid transparent;
+     border-bottom: 0;
+     border-left: .45em solid transparent;
+ }
+
